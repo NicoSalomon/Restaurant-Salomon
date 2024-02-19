@@ -1,3 +1,4 @@
+// alert("¡ Bienvenido !\nDisculpe las molestias, solo disponemos de algunas minutas.")
 
   var pedidos = [];
   var precioPorPedido = 100;
@@ -44,14 +45,16 @@
       });
 
       var output = document.getElementById("output");
-      output.innerHTML = "¡Pedido realizado!<br>Número de Pedido: " +
-        numeroPedido +
+      output.innerHTML = "<span class='respuesta'>¡Pedido realizado!</span><br>Número de Pedido: " +
+      "<span class='respuesta'>" + numeroPedido + "</span>" +
         "<br>Nombre: " +
-        nombreUsuario +
+        "<span class='respuesta'>" + nombreUsuario + "</span>" +
         "<br>Comida: " +
-        tipoComida +
+        "<span class='respuesta'>" + tipoComida + "</span>" +
         "<br>Acompañamiento: " +
-        seleccionAcompanamiento;
+        "<span class='respuesta'>" + seleccionAcompanamiento + "</span>";
+
+        output.style.display = "block";
 
       guardarPedidosEnJSON();
     } else {
@@ -83,14 +86,14 @@
           }
 
           var output = document.getElementById("output");
-          output.innerHTML = "¡Pedido eliminado!<br>Número de Pedido: " +
-            pedidoEliminado.numero +
+          output.innerHTML = "<span class='respuesta2'>¡Pedido eliminado!</span><br>Número de Pedido: " +
+          "<span class='respuesta2'>" + pedidoEliminado.numero + "</span>" +
             "<br>Nombre: " +
-            pedidoEliminado.nombre +
+            "<span class='respuesta2'>" + pedidoEliminado.nombre + "</span>" +
             "<br>Comida: " +
-            pedidoEliminado.comida +
+            "<span class='respuesta2'>" + pedidoEliminado.comida + "</span>" +
             "<br>Acompañamiento: " +
-            pedidoEliminado.acompanamiento;
+            "<span class='respuesta2'>" + pedidoEliminado.acompanamiento + "</span>";
 
           guardarPedidosEnJSON();
         } else {
