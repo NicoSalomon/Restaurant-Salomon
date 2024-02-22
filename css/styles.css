@@ -35,9 +35,8 @@ body {
     text-shadow: none;
   }
 
-  /* Estilo para el texto de las respuestas */
   .respuesta {
-    color: green; /* Puedes cambiar el color a tu preferencia */
+    color: green;
   }
 
   .respuesta2 {
